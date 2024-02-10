@@ -27,7 +27,7 @@ def contact(request):
     return HttpResponse('Contact Page')
 
 urlpatterns = [
-    path('', home()),
-    path('home/', home()),
-    path('contact/', contact()),
+    path('', home),
+    path('home/', home),
+    path('contact/', contact),
 ]
