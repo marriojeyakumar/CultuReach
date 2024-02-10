@@ -8,7 +8,7 @@ import foodIcon from './img/singingIcon.png';
 import recreationIcon from './img/recreationIcon.png';
 
 function EventSelector() {
-  const events = [
+  const eventTypes = [
     { name: 'Dancing', icon: dancingIcon },
     { name: 'Singing', icon: singingIcon },
     { name: 'Recreation', icon: recreationIcon },
@@ -19,13 +19,13 @@ function EventSelector() {
   return (
     <div className="event-selector-container">
       <header className="event-header">
-        <h2>Event Types</h2>
+        <h2>Event Type</h2>
       </header>
       <div className="event-selector">
-        {events.map((event, index) => (
-          <div className="event-button" key={index}>
-            <img src={event.icon} alt={`${event.name} icon`} className="event-icon" />
-            <span>{event.name}</span>
+        {eventTypes.map((eventType, index) => (
+          <div className="culture-button" key={index}>
+            <img src={eventType.icon} alt={`${eventType.name} flag`} className="event-icon" />
+            <span>{eventType.name}</span>
           </div>
         ))}
       </div>

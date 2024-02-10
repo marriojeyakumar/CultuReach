@@ -18,12 +18,12 @@ const Navbar = () => {
         <img src={appLogo} alt="logo" className="navbar-logo" />
       </div>
       <div className="navbar-links">
-        <a href="#home" className="nav-link">
+        <RouterLink to="/" className="nav-link">
           Home
-        </a>
-        <a href="#events" className="nav-link">
+        </RouterLink>
+        <RouterLink to="/events" className="nav-link">
           Events
-        </a>
+        </RouterLink>
         <RouterLink to="/about-us" className="nav-link">
           About Us
         </RouterLink>

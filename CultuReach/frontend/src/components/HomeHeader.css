@@ -2,6 +2,7 @@
 
 .home-header {
     margin-left: 200px;
+    margin-right: 200px;
     text-align: left;
     padding: 20px; 
     color: white; 
@@ -9,16 +10,35 @@
   }
   
   .home-header h1 {
-    width: 800px;
+    max-width: 600px;
     font-size: 2.5em; 
     margin-bottom: 0.5em; 
   }
   
   .home-header p {
-    width: 800px;
+    max-width: 600px;
     font-size: 1em;
     margin-bottom: 1em; 
   }
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px; /* Adjust the gap between the text and the image */
+  }
+  
+  .text-container {
+    flex: 1; /* Takes up the remaining space */
+    max-width: 600px; /* Or whatever maximum width you want for the text */
+  }
+  
+  .image-container img {
+    width: 100%; /* Adjust width as necessary */
+    max-width: 500px; /* Maximum size of the image */
+    height: auto; /* Keep the aspect ratio of the image */
+  }
+  
   
   .join-button {
     padding: 10px 20px;
@@ -33,4 +53,5 @@
   .join-button:hover {
     background-color: #fcce00bf; 
   }
+  
   

@@ -11,18 +11,21 @@
   .culture-selector {
     padding-top: 15px;
     display: flex;
-    margin-left: 180px;
+    margin-left: 200px;
+    margin-right: 200px;
     justify-content: flex-start; 
     align-items: center;
     padding: 5; 
-    gap: 10px; 
+    gap: 20px; 
     overflow-x: auto; 
+    scroll-behavior: smooth;
+    flex: none; /* This prevents the selector from growing */
+    position: relative;
   }
   
   .culture-button {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;;
     align-items: center;
     justify-content: center;
     width: 175px;
@@ -57,4 +60,26 @@
     color: white;
     font-size: 24px;
   }
+  .culture-selector-container {
+    position: relative;
+    max-width: 100%;
+  }
+  
+  
+  .culture-selector-wrapper {
+    display: flex;
+  }
+  
+
+  
+  .culture-button {
+    /* Your styles */
+    min-width: 230px; /* Ensure the buttons don't shrink */
+  }
+  
+  /* Hide scrollbar visually */
+  .culture-selector::-webkit-scrollbar {
+    display: none;
+  }
+  
   
