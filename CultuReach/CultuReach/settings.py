@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'CultuReach.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Hackathan',
+        'NAME': 'Hackathon',
         'USER': 'root',
         'PASSWORD': 'Mbk2X5gn',
         'HOST': 'localhost',  # or the hostname where your MySQL server is running
