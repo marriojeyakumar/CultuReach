@@ -3,22 +3,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #001735; /* Dark blue background */
+    background-color: #102733; /* Dark blue background */
     color: white;
-    padding: 2rem 2rem 0.005rem;
+    padding: 0.5rem 2rem 0.005rem;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
   }
   
 
-   .navbar-khanda {
-    height: 35px; /* or the size you prefer */
+   .navbar-logo {
+    height: 55px; /* or the size you prefer */
     margin-right: 10px;
     vertical-align: middle; /* To align it with your text */
   }
   
-  .navbar-logo {
-    font-size: 1rem;
-    font-weight: normal;
-  }
   
   .navbar-links {
     display: flex;
@@ -26,7 +25,7 @@
   
   .nav-link {
     text-decoration: none;
-    color: #F5E4AF;
+    color: #FCCD00;
     margin-left: 2rem;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease;

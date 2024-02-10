@@ -1,0 +1,8 @@
+.culture-selector {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping onto the next line if the container's width is exceeded */
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Align buttons vertically */
+    gap: 20px; /* This adds space between the buttons */
+  }
+  
