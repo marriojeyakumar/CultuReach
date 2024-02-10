@@ -4,6 +4,7 @@
     margin-left: 200px;
     margin-right: 200px;
     text-align: left;
+    align-items: center;
     padding: 20px; 
     color: white; 
     font-family: Muli, sans-serif, extra-bold;
@@ -35,7 +36,7 @@
   
   .image-container img {
     width: 100%; /* Adjust width as necessary */
-    max-width: 500px; /* Maximum size of the image */
+    max-width: 600px; /* Maximum size of the image */
     height: auto; /* Keep the aspect ratio of the image */
   }
   
@@ -43,6 +44,7 @@
   .join-button {
     padding: 10px 20px;
     font-size: 1em;
+    font-family: Muli, sans-serif, bold;
     background-color: #FCCD00; 
     color: #102733;
     border: none;

@@ -4,7 +4,7 @@ import './EventTypeSelector.css';
 import dancingIcon from './img/dancingIcon.png';
 import singingIcon from './img/singingIcon.png';
 import artIcon from './img/artIcon.png';
-import foodIcon from './img/singingIcon.png';
+import foodIcon from './img/foodIcon.png';
 import recreationIcon from './img/recreationIcon.png';
 
 function EventSelector() {

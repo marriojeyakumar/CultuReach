@@ -5,6 +5,7 @@ import './App.css';
 import AppBar from './components/AppBar';
 import HomeHeader from './components/HomeHeader';
 import CultureSelector from './components/CultureSelector';
+import EventsDisplay from './components/EventsDisplay';
 import EventTypeSelector from './components/EventTypeSelector';
 import ContactForm from './components/ContactForm';
 import AboutUs from './components/AboutUs'; 
@@ -19,6 +20,7 @@ function App() {
             <HomeHeader />
             <CultureSelector />
             <EventTypeSelector />
+            <EventsDisplay />
             <ContactForm />
           </Route>
           <Route path="/about-us" component={AboutUs} />
