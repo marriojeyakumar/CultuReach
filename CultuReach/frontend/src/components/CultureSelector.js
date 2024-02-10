@@ -15,7 +15,6 @@ function CultureSelector() {
       <CultureButton cultureName="Brazilian" flagImage={brazilianFlag} />
       <CultureButton cultureName="Indian" flagImage={indianFlag} />
       <CultureButton cultureName="Chinese" flagImage={chineseFlag} />
-      {/* ...other CultureButton components */}
     </div>
   );
 }

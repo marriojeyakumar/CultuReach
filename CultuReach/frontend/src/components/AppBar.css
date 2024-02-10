@@ -6,7 +6,6 @@
     background-color: #102733; /* Dark blue background */
     color: white;
     padding: 0.5rem 2rem 0.005rem;
-    width: 100%;
     top: 0;
     z-index: 1000;
   }

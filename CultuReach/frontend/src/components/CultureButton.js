@@ -5,7 +5,7 @@ function CultureButton({ cultureName, flagImage }) {
   return (
     <button className="culture-button">
       <img src={flagImage} alt={`${cultureName} flag`} className="culture-flag" />
-      <span>{cultureName}</span>
+      <span>{cultureName} </span>
     </button>
   );
 }

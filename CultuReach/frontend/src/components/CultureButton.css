@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: center;
     position: relative; /* Needed for absolute positioning of children */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 24px;
     transition: background-color 0.3s ease;
     border-radius: 10px; /* Optional: if you want rounded corners */
