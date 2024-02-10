@@ -1,1 +1,2 @@
-wleiu hfnf;oiewnf
+def __init__():
+    print('hi')
