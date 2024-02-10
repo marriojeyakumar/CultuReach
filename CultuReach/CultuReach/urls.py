@@ -18,7 +18,15 @@ from django.urls import path
 #this directory, method named views
 from . import views
 
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse('Home Page')
+
+def contact(request):
+    return HttpResponse('Contact Page')
+
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('<int:record_id>/', views.record_detail, name='record_detail'),
+    path('home/', home()),
+    path('contact/', contact()),
 ]
