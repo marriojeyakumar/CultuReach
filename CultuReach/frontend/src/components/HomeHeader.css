@@ -1,33 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
 .home-header {
     margin-left: 200px;
     text-align: left;
-    padding: 20px; /* Adjust padding as needed */
-    color: white; /* Adjust text color as needed */
+    padding: 20px; 
+    color: white; 
+    font-family: Muli, sans-serif, extra-bold;
   }
   
   .home-header h1 {
     width: 800px;
-    font-size: 2.5em; /* Adjust font size as needed */
-    margin-bottom: 0.5em; /* Space between the title and subtitle */
+    font-size: 2.5em; 
+    margin-bottom: 0.5em; 
   }
   
   .home-header p {
     width: 800px;
     font-size: 1em;
-    margin-bottom: 1em; /* Space between the subtitle and button */
+    margin-bottom: 1em; 
   }
   
   .join-button {
     padding: 10px 20px;
     font-size: 1em;
-    background-color: #FCCD00; /* Adjust button color as needed */
-    color: white;
+    background-color: #FCCD00; 
+    color: #102733;
     border: none;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; 
     cursor: pointer;
   }
   
   .join-button:hover {
-    background-color: #e07c00; /* Darker shade for hover effect */
+    background-color: #fcce00bf; 
   }
   

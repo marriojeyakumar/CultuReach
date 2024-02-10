@@ -4,19 +4,19 @@
     text-align: left;
     color: white;
     font-family: Muli, sans-serif, bold;
-    margin-bottom: 10px; /* Reduced padding between the header and the buttons */
-    margin-left: 200px; /* Aligns the text with the left edge of the buttons */
+    margin-bottom: 10px; 
+    margin-left: 200px; 
   }
   
   .culture-selector {
     padding-top: 15px;
     display: flex;
     margin-left: 180px;
-    justify-content: flex-start; /* Aligns buttons to the start of the container */
+    justify-content: flex-start; 
     align-items: center;
-    padding: 5; /* Adjust padding as needed */
-    gap: 10px; /* This is the space between each button */
-    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    padding: 5; 
+    gap: 10px; 
+    overflow-x: auto; 
   }
   
   .culture-button {
@@ -29,28 +29,28 @@
     height: 115px;
     background-color: #29404E;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: adds some depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
     cursor: pointer;
     transition: transform 0.3s ease;
-    position: relative; /* For absolute positioning of the flag and text */
+    position: relative; 
   }
   
   .culture-button:hover {
-    transform: translateY(-5px); /* Optional: adds a hover effect */
+    transform: translateY(-5px); 
   }
   
   .culture-flag {
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 20px; /* Adjusts the flag position from the top */
+    top: 20px; 
     left: 50%;
-    transform: translateX(-50%); /* Centers the flag horizontally */
+    transform: translateX(-50%); 
   }
   
   .culture-button span {
     position: absolute;
-    bottom: 20px; /* Adjusts the text position from the bottom */
+    bottom: 20px; 
     width: 100%;
     font-family: Muli, sans-serif;
     text-align: center;

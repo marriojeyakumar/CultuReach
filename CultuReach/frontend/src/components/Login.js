@@ -5,8 +5,6 @@ const Login = ({ onLogin }) => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Perform authentication logic (e.g., send data to backend)
-    // For simplicity, just log in for now
     console.log('Logged in:', email);
     onLogin(email);
   };

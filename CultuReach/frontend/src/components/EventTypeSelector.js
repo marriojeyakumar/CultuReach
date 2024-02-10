@@ -1,21 +1,19 @@
 import React from 'react';
-import './EventTypeSelector.css'; // Create this CSS file for styling
+import './EventTypeSelector.css'; 
 
-// Placeholder imports - replace these with actual image paths
-import dancingIcon from './img/singingIcon.png';
+import dancingIcon from './img/dancingIcon.png';
 import singingIcon from './img/singingIcon.png';
-import sportsIcon from './img/singingIcon.png';
-import artIcon from './img/singingIcon.png';
-import cookingIcon from './img/singingIcon.png';
+import artIcon from './img/artIcon.png';
+import foodIcon from './img/singingIcon.png';
+import recreationIcon from './img/recreationIcon.png';
 
 function EventSelector() {
   const events = [
     { name: 'Dancing', icon: dancingIcon },
     { name: 'Singing', icon: singingIcon },
-    { name: 'Sports', icon: sportsIcon },
+    { name: 'Recreation', icon: recreationIcon },
     { name: 'Art', icon: artIcon },
-    { name: 'Cooking', icon: cookingIcon },
-    // Add more events as needed
+    { name: 'Food', icon: foodIcon },
   ];
 
   return (

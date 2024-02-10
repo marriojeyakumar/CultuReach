@@ -1,7 +1,6 @@
 import React from 'react';
 import './CultureSelector.css';
 
-// Placeholder imports - replace these with actual image paths
 import portugueseFlag from './img/portugalFlag.png';
 import brazilianFlag from './img/brazilFlag.png';
 import indianFlag from './img/indiaFlag.png';
@@ -15,7 +14,6 @@ function CultureSelector() {
     { name: 'Indian', flag: indianFlag },
     { name: 'Chinese', flag: chineseFlag },
     { name: 'Japanese', flag: japaneseFlag },
-    // Add more cultures as needed
   ];
 
   return (

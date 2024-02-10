@@ -5,8 +5,6 @@ const Signup = ({ onSignup }) => {
   const [password, setPassword] = useState('');
 
   const handleSignup = () => {
-    // Perform user registration logic (e.g., send data to backend)
-    // For simplicity, just log in for now
     console.log('Signed up:', email);
     onSignup(email);
   };
