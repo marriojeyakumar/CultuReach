@@ -1,8 +1,60 @@
-.culture-selector {
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+.culture-header {
+    text-align: left;
+    color: white;
+    font-family: Muli, sans-serif, bold;
+    margin-bottom: 10px; /* Reduced padding between the header and the buttons */
+    margin-left: 200px; /* Aligns the text with the left edge of the buttons */
+  }
+  
+  .culture-selector {
+    padding-top: 15px;
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping onto the next line if the container's width is exceeded */
-    justify-content: center; /* Center buttons horizontally */
-    align-items: center; /* Align buttons vertically */
-    gap: 20px; /* This adds space between the buttons */
+    margin-left: 180px;
+    justify-content: flex-start; /* Aligns buttons to the start of the container */
+    align-items: center;
+    padding: 5; /* Adjust padding as needed */
+    gap: 10px; /* This is the space between each button */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+  }
+  
+  .culture-button {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 115px;
+    background-color: #29404E;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: adds some depth */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative; /* For absolute positioning of the flag and text */
+  }
+  
+  .culture-button:hover {
+    transform: translateY(-5px); /* Optional: adds a hover effect */
+  }
+  
+  .culture-flag {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px; /* Adjusts the flag position from the top */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the flag horizontally */
+  }
+  
+  .culture-button span {
+    position: absolute;
+    bottom: 20px; /* Adjusts the text position from the bottom */
+    width: 100%;
+    font-family: Muli, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 24px;
   }
   

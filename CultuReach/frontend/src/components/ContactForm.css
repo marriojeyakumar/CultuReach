@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+.contact-form-container {
+  text-align: left;
+  margin: 20px;
+}
+
+.contact-form-container h2 {
+  color: white;
+  font-family: Muli, sans-serif, bold;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: Muli, sans-serif;
+}
+
+button {
+  background-color: #29404E;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Muli, sans-serif;
+}
+
+button:hover {
+  background-color: #1c2b38;
+}
