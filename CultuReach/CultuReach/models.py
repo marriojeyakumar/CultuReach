@@ -2,18 +2,18 @@ from django.db import models
 
 class event(models.Model):
     event_id = models.IntegerField()
-    name = models.CharField(45)
-    host_id = models.CharField(45)
+    name = models.CharField(max_length=45)
+    host_id = models.CharField(max_length=45)
     start_time = models.IntegerField()
-    location = models.CharField(45)
-    tags = models.CharField(45)
-    culture = models.CharField(45)
+    location = models.CharField(max_length=45)
+    tags = models.CharField(max_length=45)
+    culture = models.CharField(max_length=45)
 
 class users(models.Model):
     user_id = models.IntegerField()
-    email = models.CharField(45)
-    pswrd = models.CharField(45)
-    username = models.CharField(45)
+    email = models.CharField(max_length=45)
+    pswrd = models.CharField(max_length=45)
+    username = models.CharField(max_length=45)
 
 class roster(models.Model):
     event_id = models.IntegerField()

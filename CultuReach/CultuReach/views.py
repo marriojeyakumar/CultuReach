@@ -52,6 +52,9 @@ def createUser(request):
 
 def createRoster(request):
     Ievent_id = request.POST.get('event_id')
-    Iuser = request.POST.get('user_id')
+    Iuser_id = request.POST.get('user_id')
     
-    newroster = roster
+    newroster = roster(event_id = Ievent_id, user_id = Iuser_id)
+    newroster.save()
+
+def createFO
