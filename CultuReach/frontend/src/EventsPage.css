@@ -1,0 +1,49 @@
+/* EventsPage.css */
+.events-page {
+    background-color: #f5f5f5; /* Light background for the page */
+    color: #333; /* Dark text for readability */
+  }
+  
+  .events-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #29404E; /* Dark blue background */
+    color: white; /* White text */
+  }
+  
+  .browse-map-link {
+    background-color: #ffc107; /* Yellow background */
+    color: white; /* White text */
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+  }
+  
+  .browse-map-link:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .event-list-item {
+    background-color: white; /* White background for each item */
+    border-radius: 8px;
+    margin-bottom: 10px; /* Space between items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .event-list-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover for interaction */
+  }
+  
+  /* Add more styles for event details, icons, and responsiveness as needed */
+  

@@ -3,28 +3,85 @@
 .events-display {
   font-family: Muli, sans-serif;
   max-width: 1200px;
-  margin: auto;
+  margin-top: 10px;
+  margin-left: 200px;
   padding: 20px;
 }
+
+.events-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.events-header {
+    text-align: left;
+    padding-left: 0px; /* Adjust based on your design */
+    margin-bottom: 20px; /* Space before the grid */
+  }
+  
+  .events-header h2 {
+    color: white;
+    font-family: 'Muli', sans-serif;
+    font-size: 1.75em;
+    font-weight: bold;
+  }
+  .see-all-events {
+    text-align: right;
+  }
+  
+  .see-all-events-button {
+    color: #ffc107;
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+  }
+  
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  grid-gap: 20px;
+  grid-gap: 60px;
 }
 
 .event-card {
-  background-color: #29404E;
+    background-color: #102733;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative; /* For positioning the hover effect */
+  }
+  
+  .event-card:hover .event-title {
+    text-decoration: underline; /* Underlines the title on hover */
+  }
+  
+  .event-card:hover .event-image {
+    opacity: 0.4; /* Makes the image slightly transparent on hover */
+  }
+  
+  .event-image {
+    width: 100%;
+    transition: opacity 0.3s ease; /* Smooth transition for the opacity */
+  }
+  
+  .event-title {
+    transition: text-decoration 0.3s ease; /* Smooth transition for the underline */
+    cursor: pointer; /* Changes the cursor to indicate the title is interactive */
+  }
+
+.event-card {
+  background-color: #102733;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.event-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
 
 .event-image {
   width: 100%;
@@ -40,8 +97,10 @@
 
 .event-title {
   font-size: 1.5rem;
+  margin-left: 5px;
+  font-weight: bolder;
   text-align: left;
-  margin-top: 0px;
+  margin-top: 15px;
   margin-left: 5px;
   color: white;
   margin-bottom: 5px;
@@ -50,42 +109,43 @@
 .event-host {
   font-size: 1rem;
   margin: 0;
+  margin-left: 5px;
+  font-weight: bolder;
   text-align: left;
-  margin-bottom: 5px;
-  color: #e0dbdbd6;
+  color: #e0dbdb8b;
 }
 
 .event-info {
+  margin-left: 7px;
+  margin: 10px;
   font-size: 0.9rem;
-  color: #777;
+  color: white;
   display: flex;
-  align-items: left;
-  justify-content: space-between;
+  text-align: left;
   margin-bottom: 10px;
 }
 
 .event-info .icon {
   margin-right: 5px;
+  height: 20px ;
 }
 
-.event-attendance,
-.event-price {
+.event-attendance
+ {
   display: flex;
-  align-items: right;
+  margin-right: 10px;
+  align-items: left;
+  color: #e0dbdb8b
 }
 
-.see-all-events {
-  text-align: center;
-  margin-top: 20px;
+.event-attendance .ticket-icon {
+    margin-left: 10px;
+    margin-right: 5px;
+    height: 20px;
+}
+.event-attendance .check-icon {
+  margin-left: 15px;
+  margin-right: 5px;
+  height: 20px;
 }
 
-.see-all-events-button {
-  color: #ffc107;
-  text-decoration: underline;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 10px 20px;
-  font-family: 'Muli', sans-serif;
-  font-weight: bold;
-}
