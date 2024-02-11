@@ -8,7 +8,7 @@ from .models import *
 from rest_framework import viewsets
 
 # import the TodoSerializer from the serializer file
-from .serializers import CultuReachSerializer
+from .serializers import *
 
 # import the Todo model from the models file
 from .models import *
@@ -18,7 +18,7 @@ class EventView(viewsets.ModelViewSet):
 
 	# create a serializer class and 
 	# assign it to the TodoSerializer class
-	serializer_class = CultuReachSerializer
+	serializer_class = EventSerializer
 
 	# define a variable and populate it 
 	# with the Todo list objects
@@ -26,15 +26,15 @@ class EventView(viewsets.ModelViewSet):
 #________________________________________
 
 class UsersView(viewsets.ModelViewSet):
-    serializer_class = CultuReachSerializer
+    serializer_class = UsersSerializer
     queryset = users.objects.all()
 
 class RosterView(viewsets.ModelViewSet):
-    serializer_class = CultuReachSerializer
+    serializer_class = RosterSerializer
     queryset = users.objects.all()
 
 class ForumView(viewsets.ModelViewSet):
-    serializer_class = CultuReachSerializer
+    serializer_class = ForumSerializer
     queryset = forum.objects.all()
 
 def home(request):

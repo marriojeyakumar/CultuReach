@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-hi+&425z!ba+iqkv*uvc0p^*e=wwxkmti442r1-9d=@9^uqiir'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'CultuReach.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'testdatabase',
+        'NAME': 'mydb',
         'USER': 'root',
         'PASSWORD': 'Mbk2X5gn',
         'HOST': 'localhost',  # or the hostname where your MySQL server is running

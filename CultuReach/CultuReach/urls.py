@@ -46,12 +46,13 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 
 # register the router
-router.register(r'tasks',views.EventView, 'task')
-router.register(r'tasks',views.UsersView, 'task')
-router.register(r'tasks',views.RosterView, 'task')
-router.register(r'tasks',views.ForumView, 'task')
+router.register(r'events',views.EventView, 'event')
+router.register(r'users',views.UsersView, 'user')
+router.register(r'rosters',views.RosterView, 'roster')
+router.register(r'forums',views.ForumView, 'forum')
 
 urlpatterns = [
+    path('', views.home),
 	path('admin/', admin.site.urls),
 
 	# add another path to the url patterns
