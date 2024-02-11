@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+.event-expand {
+  font-family: Muli, sans-serif, bold;
+  background-color: #f7f7f7;
+}
+
+.event1-header {
+  padding-top: 2px;
+  height: 10rem;
+  background-color: #ffffff;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event1-title {
+  margin-left: 250px;
+  font-size: 36px;
+  font-weight: 80px;
+  margin-bottom: 0px;
+}
+
+.pfp {
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  border-radius: 50%; /* Circular profile picture */
+  object-fit: cover;
+  margin-left: 255px;
+  margin-right: 16px;
+}
+
+.hosted-by-container {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.hosted-by-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hosted-by {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.event1-host {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.event1-body {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+}
+
+.event1-image {
+  margin-top: 30px;
+  border-radius: 4px;
+  margin-left: 50px;
+  width: 700px; /* Adjust based on your design preference */
+  height: auto;
+  object-fit: cover;
+}
+
+.event1-details {
+  background-color: #fff;
+  padding: 16px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  width: 300px; /* Adjust based on your design preference */
+  height: fit-content;
+  margin-top: 30px; /* Adjust the margin-top */
+  margin-left: -150px; /* Adjust the margin-left */
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column; /* Change to a column layout */
+  align-items: flex-start; /* Align items to the start (left) */
+  margin-bottom: 8px; /* Add some space between the items */
+}
+
+.icon {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.time-icon {
+  height: 20px;
+}
+
+.location-icon {
+  height: 20px;
+}
+
+.event1-date-time {
+  margin-top: 5px;
+}
+
+.event1-location, .event1-adress {
+  text-align: left;
+  margin: 0;
+}
+
+.event1-adress {
+  margin-top: -10px;
+}
+
+.details-header {
+  text-align: left;
+  margin-left: 205px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.details {
+  text-align: left;
+  margin-left: 205px;
+  max-width: 730px; /* Set the maximum width for wrapping */
+  margin-bottom: 35px;
+}
+
+.tags-container {
+  text-align: left;
+  margin-left: 205px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tags-container > * {
+  margin-right: 10px; /* Adjust the value to control the spacing */
+}
+
+/* Optional: To remove the right margin from the last element */
+.tags-container > *:last-child {
+  margin-right: 0;
+} 
+
+.attendees-header {
+  text-align: left;
+  margin-left: 205px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
