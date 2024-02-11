@@ -10,14 +10,9 @@ import checkIcon from "./img/check-icon.png";
 import mockEvent1 from "./img/mockEvent1.png";
 import mockEvent2 from "./img/mockEvent2.png";
 import mockEvent3 from "./img/mockEvent3.png";
-import mockEvent4 from "./img/mockEvent4.png";
-import mockEvent5 from "./img/mockEvent5.png";
-import mockEvent6 from "./img/mockEvent6.png";
-import mockEvent7 from "./img/mockEvent7.png";
 
 const mockEvents = [
   {
-    id: 1,
     title: "Exploring Banff National Park",
     image: mockEvent1,
     place: "Banff National Park",
@@ -27,9 +22,8 @@ const mockEvents = [
     price: "Free",
   },
   {
-    id: 2,
     title: "Second Gathering",
-    image: mockEvent2,
+    image: mockEvent3,
     place: "Maynard Self Exploration Meetup Group",
     host: "Maynard Group",
     time: "Thu, Feb 15 - 7:30 PM EST",
@@ -37,9 +31,8 @@ const mockEvents = [
     price: "Free",
   },
   {
-    id: 3,
     title: "Sunday Mahjong",
-    image: mockEvent3,
+    image: mockEvent2,
     place: "Watertown, MA, USA",
     host: "Jennifer Sherman",
     time: "Sun, Feb 11, 10 - 12:30 PM EST",
@@ -47,9 +40,8 @@ const mockEvents = [
     price: "Free",
   },
   {
-    id: 4,
     title: "Intermediate and Advanced Samba!",
-    image: mockEvent4,
+    image: "mockEvent4",
     place: "536 Massachusetts Ave Cambridge MA, USA",
     host: "Sambista R.",
     time: "Wed, Feb 14, 7:30 - 8:30 PM EST",
@@ -57,9 +49,8 @@ const mockEvents = [
     price: "$10",
   },
   {
-    id: 5,
     title: "History of Printmaking and Black Women",
-    image: mockEvent5,
+    image: "mockEvent5",
     place: "590 Washington St MA, USA",
     host: "Sambista R.",
     time: "Tue, Feb 20, 1:00 - 3:30 PM EST",
@@ -67,9 +58,8 @@ const mockEvents = [
     price: "Free",
   },
   {
-    id: 6,
     title: "Workshop for Women in STEM",
-    image: mockEvent6,
+    image: "mockEvent6",
     place: "AMSA Charter School Marlborugh, MA, USA",
     host: "Pat and Wendy",
     time: "Saturday, Feb 24, 12:00 - 4:30 PM EST",
@@ -77,9 +67,8 @@ const mockEvents = [
     price: "Free",
   },
   {
-    id: 7,
     title: "Diwali Dance festival",
-    image: mockEvent7,
+    image: "mockEvent7",
     place: "152 Main St, Shrewsbury, MA, USA",
     host: "John Doe",
     time: "Friday, Nov 1, 5:00 - 9:30 PM EST",
@@ -105,23 +94,22 @@ function EventsDisplay() {
         </div>
       </div>
       <div className="grid">
-        {events.map((event) => (
-          <Link to={`/event/event?id=${event.id}`} key={event.id} className="event-card-link">
-            <div className="event-card">
-              <img src={event.image} alt={event.title} className="event-image" />
-              <h3 className="event-title">{event.title}</h3>
-              <p className="event-host">Hosted by: {event.host}</p>
-              <p className="event-info">
-                <img src={calendarIcon} alt="calendar icon" className="icon"/>
-                {event.time}</p>
-              <p className="event-attendance">
-                <img src={ticketIcon} alt="ticket icon" className="ticket-icon"/>
-                {event.going} going
-                <img src={checkIcon} alt="check icon" className="check-icon"/>
-                {event.price}
+        {events.map((event, index) => (
+          <div className="event-card" key={index}>
+            <img src={event.image} alt={event.title} className="event-image" />
+            <h3 className="event-title">{event.title}</h3>
+            <p className="event-host">Hosted by: {event.host}</p>
+            <p className="event-info">
+              <img src={calendarIcon} alt="calendar icon" className="icon"/>
+              {event.time}</p>
+            <p className="event-attendance">
+              <img src={ticketIcon} alt="ticket icon" className="ticket-icon"/>
+              {event.going} going
+              <img src={checkIcon} alt="check icon" className="check-icon"/>
+              {event.price}
               </p>
-            </div>
-          </Link>
+    
+          </div>
         ))}
       </div>
     </div>
