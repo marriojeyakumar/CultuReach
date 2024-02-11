@@ -44,21 +44,22 @@
   margin-top: 0px;
   margin-left: 5px;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .event-host {
   font-size: 1rem;
   margin: 0;
+  text-align: left;
   margin-bottom: 5px;
-  color: #555;
+  color: #e0dbdbd6;
 }
 
 .event-info {
   font-size: 0.9rem;
   color: #777;
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
   margin-bottom: 10px;
 }
@@ -70,7 +71,7 @@
 .event-attendance,
 .event-price {
   display: flex;
-  align-items: center;
+  align-items: right;
 }
 
 .see-all-events {

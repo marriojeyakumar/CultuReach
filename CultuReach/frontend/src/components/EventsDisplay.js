@@ -48,17 +48,17 @@ const mockEvents = [
     image: "mockEvent5",
     place: "590 Washington St MA, USA",
     host: "Sambista R.",
-    time: "Wed, Feb 14, 1:00 - 3:30 PM EST",
+    time: "Tue, Feb 20, 1:00 - 3:30 PM EST",
     going: 4,
     price: "Free"
   },
   {
-    title: "History of Printmaking and Black Women",
-    image: "mockEvent5",
-    place: "590 Washington St MA, USA",
-    host: "Sambista R.",
-    time: "Wed, Feb 14, 1:00 - 3:30 PM EST",
-    going: 4,
+    title: "Workshop for Women in STEM",
+    image: "mockEvent6",
+    place: "AMSA Charter School Marlborugh, MA, USA",
+    host: "Pat and Wendy",
+    time: "Saturday, Feb 24, 12:00 - 4:30 PM EST",
+    going: 16,
     price: "Free"
   },
   
