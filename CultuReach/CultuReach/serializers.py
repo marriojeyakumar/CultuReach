@@ -2,21 +2,21 @@
 from rest_framework import serializers
 
 # import the todo data model
-from .models import CultuReach
+from .models import *
 
 # create a serializer class
 class CultuReachSerializer(serializers.ModelSerializer):
 
 	# create a meta class
 	class event:
-		model = CultuReach
+		model = event
 		fields = ('host_id', 'start_time','event_id','name','location','description','tags','culture')
-	class user:
-		model = CultuReach
+	class users:
+		model = users
 		fields = ('user_id', 'email','pswrd','username')
 	class roster:
-		model = CultuReach
+		model = roster
 		fields = ('event_id', 'user_id')
 	class forum:
-		model = CultuReach
+		model = forum
 		fields = ('user_id', 'message','event_id','time')
