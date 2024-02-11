@@ -1,5 +1,6 @@
 import React from 'react';
 import './CultureSelector.css';
+import LocationIndicator from "./LocationIndicator.js";
 
 import portugueseFlag from './img/portugalFlag.png';
 import brazilianFlag from './img/brazilFlag.png';
@@ -23,11 +24,12 @@ function CultureSelector() {
     { name: 'Italian', flag: italianFlag },
     { name: 'Italian', flag: italianFlag },
   ];
+  const location = "Hudson, MA"
 
   return (
     <div className="culture-selector-container">
       <header className="culture-header">
-        <h2>Popular Cultures near Hudson, MA</h2>
+        <h2>Popular Cultures near <LocationIndicator location={location} /></h2>
       </header>
       <div className="culture-selector">
         {cultures.map((culture, index) => (

@@ -1,6 +1,6 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import AppBar from './components/AppBar';
 import HomeHeader from './components/HomeHeader';
@@ -9,22 +9,27 @@ import EventsDisplay from './components/EventsDisplay';
 import EventTypeSelector from './components/EventTypeSelector';
 import ContactForm from './components/ContactForm';
 import AboutUs from './components/AboutUs'; 
+import EventsPage from './EventsPage';
+
 
 function App() {
   return (
     <Router>
       <div className="App">
         <AppBar />
-        <Switch>
-          <Route path="/" exact>
-            <HomeHeader />
-            <CultureSelector />
-            <EventTypeSelector />
-            <EventsDisplay />
-            <ContactForm />
-          </Route>
-          <Route path="/about-us" component={AboutUs} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <HomeHeader />
+              <CultureSelector />
+              <EventTypeSelector />
+              <EventsDisplay />
+              <ContactForm />
+            </>
+          } />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/events" element={<EventsPage />} />
+        </Routes>
       </div>
     </Router>
   );
