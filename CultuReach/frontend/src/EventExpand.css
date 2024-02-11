@@ -140,7 +140,7 @@
 
 /* Optional: To remove the right margin from the last element */
 .tags-container > *:last-child {
-  margin-right: 0;  
+  margin-right: 0;
 } 
 
 .attendees-header {

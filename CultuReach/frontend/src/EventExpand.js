@@ -1,11 +1,11 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './EventExpand.css'; 
 import eventImage from './components/img/mockEvent1.png';
 import locationIcon from './components/img/location-icon.png';
 import timeIcon from './components/img/time-icon.png';
 
-const mockEvent = {
+const mockEvents = [{
   id: '1',
   title: "Exploring Banff National Park",
   image: eventImage,
@@ -19,11 +19,14 @@ const mockEvent = {
   details4: "Registration is not required, and all are welcome: members, non-members, visitors & guests. Optional brief intro/orientation to AMC and Worcester Chapter at 6:30 - if you're interested, contact membership@amcworcester.org.",
   going: 8,
   price: "Free",
-};
+}];
 
 const EventExpand = () => {
-  let { id } = useParams(); 
-  const event = mockEvent; 
+  const location = useLocation(); // Hook to get location object
+  const queryParams = new URLSearchParams(location.search); // Use URLSearchParams to parse query parameters
+  const id = queryParams.get('id'); // Get the 'id' query parameter
+
+  const event = mockEvents.find(e => e.id === id); // Adjust the comparison if necessary
 
   return (
     <div className="event-expand">
