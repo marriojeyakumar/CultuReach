@@ -1,60 +1,82 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
 .event-header {
-  text-align: left;
-  color: white;
-  font-family: Muli, sans-serif, bold;
-  margin-bottom: 10px;
-  margin-left: 200px;
-  margin-right: 200px;
-}
+    text-align: left;
+    color: white;
+    font-family: Muli, sans-serif, bold;
+    margin-bottom: 10px; 
+    margin-left: 200px; 
+  }
+  
+  .event-selector {
+    padding-top: 15px;
+    display: flex;
+    margin-left: 200px;
+    margin-right: 200px;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 5; 
+    gap: 20px; 
+    overflow-x: auto; 
+    scroll-behavior: smooth;
+    flex: none; 
+    position: relative;
+  }
+  
+  .event-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 115px;
+    background-color: #29404E;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative; 
+  }
+  
+  .event-button:hover {
+    transform: translateY(-5px); 
+  }
+  
+  .event-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%); 
+  }
+  
+  .event-button span {
+    position: absolute;
+    bottom: 20px; 
+    width: 100%;
+    font-family: Muli, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+  }
+  .event-selector-container {
+    position: relative;
+    max-width: 100%;
+  }
+  
+  
+  .event-selector-wrapper {
+    display: flex;
+  }
+  
 
-.event-selector {
-  display: flex;
-  margin-left: 180px;
-  margin-right: 200px;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 5px;
-  gap: 10px;
-  overflow-x: auto;
-}
-
-.event-button {
-  display: flex;
-  flex-direction: column;
-  margin-left: 20px;
-  align-items: center;
-  justify-content: center;
-  width: 175px;
-  height: 115px;
-  background-color: #29404E;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  position: relative;
-}
-
-.event-button:hover {
-  transform: translateY(-5px);
-}
-
-.event-icon {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.event-button span {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  font-family: Muli, sans-serif;
-  text-align: center;
-  color: white;
-  font-size: 24px;
-}
+  
+  .event-button {
+    min-width: 230px; 
+  }
+  .event-selector::-webkit-scrollbar {
+    display: none;
+  }
+  
+  

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+.events-display {
+  font-family: Muli, sans-serif;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-gap: 20px;
+}
+
+.event-card {
+  background-color: #29404E;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.event-image {
+  width: 100%;
+  max-height: 150px;
+  display: block;
+  object-fit: cover; /* Adjust as needed */
+}
+
+.event-content {
+  padding: 16px;
+  font-family: 'Muli', sans-serif;
+}
+
+.event-title {
+  font-size: 1.5rem;
+  text-align: left;
+  margin-top: 0px;
+  margin-left: 5px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.event-host {
+  font-size: 1rem;
+  margin: 0;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #e0dbdbd6;
+}
+
+.event-info {
+  font-size: 0.9rem;
+  color: #777;
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.event-info .icon {
+  margin-right: 5px;
+}
+
+.event-attendance,
+.event-price {
+  display: flex;
+  align-items: right;
+}
+
+.see-all-events {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.see-all-events-button {
+  color: #ffc107;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+}

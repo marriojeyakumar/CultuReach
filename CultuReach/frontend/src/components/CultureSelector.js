@@ -6,6 +6,7 @@ import brazilianFlag from './img/brazilFlag.png';
 import indianFlag from './img/indiaFlag.png';
 import chineseFlag from './img/chinaFlag.png';
 import japaneseFlag from './img/japanFlag.png';
+import italianFlag from './img/italyFlag.png';
 
 function CultureSelector() {
   const cultures = [
@@ -14,6 +15,13 @@ function CultureSelector() {
     { name: 'Indian', flag: indianFlag },
     { name: 'Chinese', flag: chineseFlag },
     { name: 'Japanese', flag: japaneseFlag },
+    { name: 'Italian', flag: italianFlag },
+    { name: 'Italian', flag: italianFlag },
+    { name: 'Italian', flag: italianFlag },
+    { name: 'Italian', flag: italianFlag },
+    { name: 'Italian', flag: italianFlag },
+    { name: 'Italian', flag: italianFlag },
+    { name: 'Italian', flag: italianFlag },
   ];
 
   return (
