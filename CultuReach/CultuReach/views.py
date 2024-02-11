@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .models import *
 
 def home(request):
-    return render(request, 'index.js', {})
+    return render(request, 'public/index.html', {})
 
 def search(request):
     context = {}
@@ -34,16 +34,24 @@ def getEventForum(request):
     if request.method == 'GET':
         curEvent_id = request.GET.get('event_id')
         eventForum = forum.objects.filter(event_id=curEvent_id)
-        matches = []
-        for forum1 in eventForum:
-            match_tag = 0
-            for tag in tags:
-                if tag in event1.tags:
-                    match_tag += 1
-            if match_tag > 0:
-                matches.append(event1)
                 
-        context['events'] = matches
+        context['eventForum'] = eventForum
+        
+    return render(request, 'index.html', context)
+
+def getRoster(request):
+    context = {}
+
+    if request.method == 'GET':
+        curEvent_id = request.GET.get('event_id')
+        curRoster = roster.objects.filter(event_id=curEvent_id)
+                
+        context['eventForum'] = curRoster
+        
+    return render(request, 'index.html', context)
+
+#def checkLogin(request):
+    #if request.method
 
 def createEvent(request):
     Ihost_id = request.POST.get('host_id')
