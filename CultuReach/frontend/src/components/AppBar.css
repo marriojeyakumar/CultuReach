@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #102733; 
+    color: white;
+    padding: 0.5rem 2rem 0.005rem;
+    top: 0;
+    z-index: 1000;
+    font-family: Muli, sans-serif;
+  }
+  
+
+   .navbar-logo {
+    height: 55px; 
+    margin-right: 10px;
+    vertical-align: middle; 
+  }
+  
+  
+  .navbar-links {
+    font-family: Muli, sans-serif;
+    display: flex;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    font-family: Muli, sans-serif;
+    color: white;
+    margin-left: 2rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    font-family: Muli, sans-serif;
+    background-color: #f0f0f0;
+    color: #0A2342;
+    border-radius: 5px;
+  }
+  

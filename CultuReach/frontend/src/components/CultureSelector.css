@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+.culture-header {
+    text-align: left;
+    color: white;
+    font-family: Muli, sans-serif, bold;
+    margin-left: 200px; 
+  }
+  
+  .culture-selector {
+    padding-top: 15px;
+    display: flex;
+    margin-left: 200px;
+    margin-right: 200px;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 5px; 
+    gap: 20px; 
+    overflow-x: auto; 
+    scroll-behavior: smooth;
+    flex: none; 
+    position: relative;
+  }
+  
+  .culture-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 115px;
+    background-color: #29404E;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative; 
+  }
+  
+  .culture-button:hover {
+    transform: translateY(-5px); 
+  }
+  
+  .culture-flag {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%); 
+  }
+  
+  .culture-button span {
+    position: absolute;
+    bottom: 20px; 
+    width: 100%;
+    font-family: Muli, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+  }
+  .culture-selector-container {
+    position: relative;
+    max-width: 100%;
+  }
+  
+  
+  .culture-selector-wrapper {
+    display: flex;
+  }
+  
+
+  
+  .culture-button {
+    min-width: 230px; 
+  }
+  
+  .culture-selector::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
