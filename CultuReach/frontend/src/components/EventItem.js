@@ -16,3 +16,4 @@ const EventItem = ({ event }) => {
 };
 
 export default EventItem;
+
