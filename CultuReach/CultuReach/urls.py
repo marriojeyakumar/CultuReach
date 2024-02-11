@@ -14,11 +14,48 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
+'''from django.urls import path
 #this directory, method named views
 from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
     path('home/', views.home),
+]'''
+
+
+
+
+
+
+
+
+from django.contrib import admin
+
+# add include to the path
+from django.urls import path, include
+
+# import views from todo
+from CultuReach import views
+
+# import routers from the REST framework
+# it is necessary for routing
+from rest_framework import routers
+
+# create a router object
+router = routers.DefaultRouter()
+
+# register the router
+router.register(r'tasks',views.CultuReachView, 'task')
+
+urlpatterns = [
+	path('admin/', admin.site.urls),
+
+	# add another path to the url patterns
+	# when you visit the localhost:8000/api
+	# you should be routed to the django Rest framework
+	path('api/', include(router.urls))
+
+
 ]
+
