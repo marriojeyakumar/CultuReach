@@ -1,96 +1,95 @@
-
 import React from "react";
-import { Link } from "react-router-dom";
+import FilterBar from "./components/FilterBar";
+import EventsList from "./components/EventsList";
 import "./EventsPage.css";
 
-import mockEvent1 from "./components/img/mockEvent1.png";
-import mockEvent2 from "./components/img/mockEvent2.png";
-import mockEvent3 from "./components/img/mockEvent3.png";
 
-const EventsPage = () => {
+import fakeEvent1 from "./components/img/mockEvent1.png";
+import fakeEvent2 from "./components/img/mockEvent2.png";
+import fakeEvent3 from "./components/img/mockEvent3.png";
+
+const EventPage = () => {
   const events = [
     {
-      title: "Exploring Banff National Park",
-      image: mockEvent1,
-      place: "Banff National Park",
-      host: "AMC Worcester 3RD",
-      time: "Wed, Feb 21 - 6:30 PM EST",
-      going: 8,
-      price: "Free",
+      title: 'Irish Tap Dancing Class',
+      image: "fakeEvent1", 
+      place: 'Dublin Dance Studio, MA',
+      host: 'Celtic Rhythms',
+      time: 'Mar 17, 2024, 5:00 PM',
+      going: 15,
+      price: 'Free',
     },
     {
-      title: "Second Gathering",
-      image: mockEvent3,
-      place: "Maynard Self Exploration Meetup Group",
-      host: "Maynard Group",
-      time: "Thu, Feb 15 - 7:30 PM EST",
-      going: 6,
-      price: "Free",
+      title: 'Brazilian Music Festival',
+      image: "fakeEvent2", 
+      place: 'Rio Rhythms Arena, MA',
+      host: 'Samba Beats',
+      time: 'Apr 21, 2024, 8:00 PM',
+      going: 200,
+      price: 'Ticketed',
     },
     {
-      title: "Sunday Mahjong",
-      image: mockEvent2,
-      place: "Watertown, MA, USA",
-      host: "Jennifer Sherman",
-      time: "Sun, Feb 11, 10 - 12:30 PM EST",
-      going: 119,
-      price: "Free",
+      title: 'Japanese Tea Ceremony',
+      image: "fakeEvent3", 
+      place: 'Kyoto Garden Center, MA',
+      host: 'Tea Culture Association',
+      time: 'May 5, 2024, 2:00 PM',
+      going: 30,
+      price: '$10 entry',
     },
     {
-      title: "Intermediate and Advanced Samba!",
-      image: "mockEvent4",
-      place: "536 Massachusetts Ave Cambridge MA, USA",
-      host: "Sambista R.",
-      time: "Wed, Feb 14, 7:30 - 8:30 PM EST",
-      going: 12,
-      price: "$10",
+      title: 'Chinese Calligraphy Workshop',
+      image: "fakeEvent4", 
+      place: 'Beijing Arts Institute, MA',
+      host: 'Calligraphy Masters',
+      time: 'Jun 12, 2024, 10:00 AM',
+      going: 20,
+      price: '$20 entry',
     },
     {
-      title: "History of Printmaking and Black Women",
-      image: "mockEvent5",
-      place: "590 Washington St MA, USA",
-      host: "Sambista R.",
-      time: "Tue, Feb 20, 1:00 - 3:30 PM EST",
-      going: 4,
-      price: "Free",
+      title: 'African Drumming Circle',
+      image: "fakeEvent5", 
+      place: 'Nairobi Music Hall, MA',
+      host: 'Drum Beats Collective',
+      time: 'Jul 8, 2024, 6:00 PM',
+      going: 50,
+      price: 'Free',
     },
     {
-      title: "Workshop for Women in STEM",
-      image: "mockEvent6",
-      place: "AMSA Charter School Marlborugh, MA, USA",
-      host: "Pat and Wendy",
-      time: "Saturday, Feb 24, 12:00 - 4:30 PM EST",
-      going: 16,
-      price: "Free",
+      title: 'Italian Cooking Class',
+      image: "fakeEvent6", 
+      place: 'Rome Culinary School, MA',
+      host: 'Chef Luigi',
+      time: 'Aug 15, 2024, 1:00 PM',
+      going: 10,
+      price: '$30 entry',
     },
     {
-      title: "Diwali Dance festival",
-      image: "mockEvent7",
-      place: "152 Main St, Shrewsbury, MA, USA",
-      host: "John Doe",
-      time: "Friday, Nov 1, 5:00 - 9:30 PM EST",
-      going: 3,
-      price: "Free",
+      title: 'French Wine Tasting',
+      image: "fakeEvent7", 
+      place: 'Paris Vineyard, MA',
+      host: 'Wine Connoisseurs',
+      time: 'Sep 20, 2024, 4:00 PM',
+      going: 25,
+      price: '$25 entry',
     },
-  ]; // This would be fetched from an API in a real app
+    {
+      title: 'Indian Classical Music Night',
+      image: "fakeEvent8", 
+      place: 'Mumbai Music Academy, MA',
+      host: 'Raga Melodies',
+      time: 'Oct 30, 2024, 7:00 PM',
+      going: 100,
+      price: 'Ticketed',
+    }
+  ];
 
-  const location = "Hudson, MA"; // This would be fetched from the user's location
-  
   return (
     <div className="events-page">
-      <div className="events-page-header">
-        <h1>Events near {location} </h1>
-      </div>
-      {events.map((event, index) => (
-        <React.Fragment key={index}>
-          {index !== 0 && <hr className="event-row-separator" />} {/* Only add separator if it's not the first item */}
-          <div className="event-list-item">
-            {/* Your event list item content */}
-          </div>
-        </React.Fragment>
-      ))}
+      <FilterBar />
+      <EventsList events={events} />
     </div>
   );
 };
 
-export default EventsPage;
+export default EventPage;

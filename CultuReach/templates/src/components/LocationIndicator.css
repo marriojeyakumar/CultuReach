@@ -1,26 +1,26 @@
 .location-indicator {
     display: inline-flex;
     align-items: center;
-    background-color: #e6e6e6; /* Example background color, adjust as needed */
-    border-radius: 5px; /* Rounded corners for the location indicator */
+    background-color: #e6e6e6; 
+    border-radius: 5px; 
     padding: 5px 10px;
     font-size: 1.5rem;
-    cursor: pointer; /* Change to a hand icon when hovering over the indicator */
-    margin-left: 5px; /* Space from the preceding text */
+    cursor: pointer; 
+    margin-left: 5px; 
     color: black;
   }
   
   .location-text {
-    margin-right: 5px; /* Space between the location text and the icon */
-    transition: text-decoration 0.3s ease; /* Smooth transition for the underline */
+    margin-right: 5px; 
+    transition: text-decoration 0.3s ease; 
   }
   
   .location-indicator:hover .location-text {
-    text-decoration: underline; /* Underline the text on hover */
+    text-decoration: underline; 
   }
 
   .edit-icon {
-    height: 1em; /* Adjust the size of the icon as needed */
+    height: 1em; 
   }
   
 

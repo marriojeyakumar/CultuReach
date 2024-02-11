@@ -11,7 +11,10 @@ import ContactForm from './components/ContactForm';
 import AboutUs from './components/AboutUs'; 
 import EventsPage from './EventsPage';
 import EventExpand from './EventExpand';
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
 
 function App() {
@@ -31,7 +34,11 @@ function App() {
           } />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/events" element={<EventsPage />} />
+<<<<<<< Updated upstream
           <Route path="/event/id=:id" element={<EventExpand />} />
+=======
+          <Route path="/event/:id" element={<EventExpand />} />
+>>>>>>> Stashed changes
         </Routes>
       </div>
     </Router>

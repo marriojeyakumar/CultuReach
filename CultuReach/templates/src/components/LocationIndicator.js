@@ -1,13 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
+import { useNavigate } from 'react-router-dom'; 
 import writeIcon from './img/write-icon.png';
 import './LocationIndicator.css';
 
 const LocationIndicator = ({ location }) => {
-  const navigate = useNavigate(); // Instantiate the navigate function
+  const navigate = useNavigate(); 
 
   const handleLocationClick = () => {
-    navigate('/events'); // Navigate to /events when the location indicator is clicked
+    navigate('/events'); 
   };
 
   return (
