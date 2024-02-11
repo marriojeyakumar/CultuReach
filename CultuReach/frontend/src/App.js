@@ -30,7 +30,7 @@ function App() {
           } />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/events" element={<EventsPage />} />
-          <Route path="/event/id=:id" element={<EventExpand />} />
+          <Route path="/event/event" element={<EventExpand />} />
 
         </Routes>
       </div>

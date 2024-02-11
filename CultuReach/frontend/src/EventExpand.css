@@ -110,42 +110,41 @@
 }
 
 .event1-adress {
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 .details-header {
   text-align: left;
-  margin-left: 190px;
+  margin-left: 205px;
   font-weight: bold;
   font-size: 20px;
 }
 
 .details {
   text-align: left;
-  margin-left: 190px;
-  max-width: 730px; /* Set the maximum width for wrapping */
+  margin-left: 205px;
+  max-width: 730px; 
   margin-bottom: 35px;
 }
 
 .tags-container {
   text-align: left;
-  margin-left: 190px;
+  margin-left: 205px;
   display: flex;
   flex-direction: row;
 }
 
 .tags-container > * {
-  margin-right: 10px; /* Adjust the value to control the spacing */
+  margin-right: 10px; 
 }
 
-/* Optional: To remove the right margin from the last element */
 .tags-container > *:last-child {
   margin-right: 0;
 } 
 
 .attendees-header {
   text-align: left;
-  margin-left: 190px;
+  margin-left: 205px;
   font-weight: bold;
   font-size: 20px;
   margin-top: 20px;

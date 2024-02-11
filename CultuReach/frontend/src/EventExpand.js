@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import './EventExpand.css'; 
 import eventImage from './components/img/mockEvent1.png';
+import eventImage2 from './components/img/mockEvent2.png';
 import locationIcon from './components/img/location-icon.png';
 import timeIcon from './components/img/time-icon.png';
 
@@ -19,7 +20,23 @@ const mockEvents = [{
   details4: "Registration is not required, and all are welcome: members, non-members, visitors & guests. Optional brief intro/orientation to AMC and Worcester Chapter at 6:30 - if you're interested, contact membership@amcworcester.org.",
   going: 8,
   price: "Free",
-}];
+  },
+  {
+  id: '2',
+  title: "Second Gathering",
+  image: eventImage2,
+  location: "7 Apple Ridge Rd unit 6",
+  adress: "7 Apple Ridge Rd unit 6 · Maynard, MA",
+  host: "Stephanie",
+  dateTime: "Thursday, February 15, 2024 at 7:30",
+  details1: "Let's gather at Salut Wine Bar, Littleton, MA. 1204 Constitution Ave. Come prepared, if willing to share, how you define love, community, what you hope to find in a gathering of women, and a current issue, through the lens of feminism, with which you hope to grow/evolve in your current life.",
+  details2: "",
+  details3: "",
+  details4: "",
+  going: 8,
+  price: "Free",
+  }
+];
 
 const EventExpand = () => {
   const location = useLocation(); // Hook to get location object
@@ -67,7 +84,6 @@ const EventExpand = () => {
         <p className="details4">{event.details4}</p>
       </div>
       <div className="tags-container">
-        <button className="tags">Exploring</button>
         <button className="tags">Social</button>
         <button className="tags">Community</button>
       </div>

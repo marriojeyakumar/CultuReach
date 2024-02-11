@@ -17,8 +17,8 @@
 
 .events-header {
     text-align: left;
-    padding-left: 0px; /* Adjust based on your design */
-    margin-bottom: 20px; /* Space before the grid */
+    padding-left: 0px; 
+    margin-bottom: 20px; 
   }
   
   .events-header h2 {
@@ -44,7 +44,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-columns: repeat(4, 1fr); 
   grid-gap: 60px;
 }
 
@@ -55,29 +55,29 @@
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    position: relative; /* For positioning the hover effect */
+    position: relative; 
   }
   
   .event-card:hover .event-title {
-    text-decoration: underline; /* Underlines the title on hover */
+    text-decoration: underline; 
   }
   
   .event-card:hover .event-image {
-    opacity: 0.4; /* Makes the image slightly transparent on hover */
+    opacity: 0.4; 
   }
   
   .event-image {
     width: 100%;
-    transition: opacity 0.3s ease; /* Smooth transition for the opacity */
+    transition: opacity 0.3s ease; 
   }
   
   .event-title {
-    transition: text-decoration 0.3s ease; /* Smooth transition for the underline */
-    cursor: pointer; /* Changes the cursor to indicate the title is interactive */
+    transition: text-decoration 0.3s ease; 
+    cursor: pointer; 
   }
   .event-card-link {
-    text-decoration: none; /* Removes the underline from links */
-    color: inherit; /* Ensures the link text color matches the surrounding text */
+    text-decoration: none; 
+    color: inherit; 
   }
 .event-card {
   background-color: white;
