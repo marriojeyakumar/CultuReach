@@ -69,7 +69,6 @@
   object-fit: cover;
 }
 
-
 .event1-details {
   background-color: #fff;
   padding: 16px;
@@ -116,21 +115,21 @@
 
 .details-header {
   text-align: left;
-  margin-left: 205px;
+  margin-left: 190px;
   font-weight: bold;
   font-size: 20px;
 }
 
 .details {
   text-align: left;
-  margin-left: 205px;
+  margin-left: 190px;
   max-width: 730px; /* Set the maximum width for wrapping */
   margin-bottom: 35px;
 }
 
 .tags-container {
   text-align: left;
-  margin-left: 205px;
+  margin-left: 190px;
   display: flex;
   flex-direction: row;
 }
@@ -141,12 +140,12 @@
 
 /* Optional: To remove the right margin from the last element */
 .tags-container > *:last-child {
-  margin-right: 0;
+  margin-right: 0;  
 } 
 
 .attendees-header {
   text-align: left;
-  margin-left: 205px;
+  margin-left: 190px;
   font-weight: bold;
   font-size: 20px;
   margin-top: 20px;

@@ -1,95 +1,131 @@
 import React from "react";
-import FilterBar from "./components/FilterBar";
-import EventsList from "./components/EventsList";
-import "./EventsPage.css";
+import { Link } from "react-router-dom";
+import "./EventsDisplay.css";
+import LocationIndicator from "./LocationIndicator.js";
 
+import calendarIcon from "./img/calendar-icon.png";
+import ticketIcon from "./img/ticket-icon.png";
+import checkIcon from "./img/check-icon.png";
 
-import fakeEvent1 from "./components/img/mockEvent1.png";
-import fakeEvent2 from "./components/img/mockEvent2.png";
-import fakeEvent3 from "./components/img/mockEvent3.png";
+import mockEvent1 from "./img/mockEvent1.png";
+import mockEvent2 from "./img/mockEvent2.png";
+import mockEvent3 from "./img/mockEvent3.png";
+import mockEvent4 from "./img/mockEvent4.png";
+import mockEvent5 from "./img/mockEvent5.png";
+import mockEvent6 from "./img/mockEvent6.png";
+import mockEvent7 from "./img/mockEvent7.png";
 
-const EventPage = () => {
-  const events = [
-    {
-      title: 'Irish Tap Dancing Class',
-      image: "fakeEvent1", 
-      place: 'Dublin Dance Studio, MA',
-      host: 'Celtic Rhythms',
-      time: 'Mar 17, 2024, 5:00 PM',
-      going: 15,
-      price: 'Free',
-    },
-    {
-      title: 'Brazilian Music Festival',
-      image: "fakeEvent2", 
-      place: 'Rio Rhythms Arena, MA',
-      host: 'Samba Beats',
-      time: 'Apr 21, 2024, 8:00 PM',
-      going: 200,
-      price: 'Ticketed',
-    },
-    {
-      title: 'Japanese Tea Ceremony',
-      image: "fakeEvent3", 
-      place: 'Kyoto Garden Center, MA',
-      host: 'Tea Culture Association',
-      time: 'May 5, 2024, 2:00 PM',
-      going: 30,
-      price: '$10 entry',
-    },
-    {
-      title: 'Chinese Calligraphy Workshop',
-      image: "fakeEvent4", 
-      place: 'Beijing Arts Institute, MA',
-      host: 'Calligraphy Masters',
-      time: 'Jun 12, 2024, 10:00 AM',
-      going: 20,
-      price: '$20 entry',
-    },
-    {
-      title: 'African Drumming Circle',
-      image: "fakeEvent5", 
-      place: 'Nairobi Music Hall, MA',
-      host: 'Drum Beats Collective',
-      time: 'Jul 8, 2024, 6:00 PM',
-      going: 50,
-      price: 'Free',
-    },
-    {
-      title: 'Italian Cooking Class',
-      image: "fakeEvent6", 
-      place: 'Rome Culinary School, MA',
-      host: 'Chef Luigi',
-      time: 'Aug 15, 2024, 1:00 PM',
-      going: 10,
-      price: '$30 entry',
-    },
-    {
-      title: 'French Wine Tasting',
-      image: "fakeEvent7", 
-      place: 'Paris Vineyard, MA',
-      host: 'Wine Connoisseurs',
-      time: 'Sep 20, 2024, 4:00 PM',
-      going: 25,
-      price: '$25 entry',
-    },
-    {
-      title: 'Indian Classical Music Night',
-      image: "fakeEvent8", 
-      place: 'Mumbai Music Academy, MA',
-      host: 'Raga Melodies',
-      time: 'Oct 30, 2024, 7:00 PM',
-      going: 100,
-      price: 'Ticketed',
-    }
-  ];
+const mockEvents = [
+  {
+    id: 1,
+    title: "Exploring Banff National Park",
+    image: mockEvent1,
+    place: "Banff National Park",
+    host: "AMC Worcester 3RD",
+    time: "Wed, Feb 21 - 6:30 PM EST",
+    going: 8,
+    price: "Free",
+  },
+  {
+    id: 2,
+    title: "Second Gathering",
+    image: mockEvent2,
+    place: "Maynard Self Exploration Meetup Group",
+    host: "Maynard Group",
+    time: "Thu, Feb 15 - 7:30 PM EST",
+    going: 6,
+    price: "Free",
+  },
+  {
+    id: 3,
+    title: "Sunday Mahjong",
+    image: mockEvent3,
+    place: "Watertown, MA, USA",
+    host: "Jennifer Sherman",
+    time: "Sun, Feb 11, 10 - 12:30 PM EST",
+    going: 119,
+    price: "Free",
+  },
+  {
+    id: 4,
+    title: "Intermediate and Advanced Samba!",
+    image: mockEvent4,
+    place: "536 Massachusetts Ave Cambridge MA, USA",
+    host: "Sambista R.",
+    time: "Wed, Feb 14, 7:30 - 8:30 PM EST",
+    going: 12,
+    price: "$10",
+  },
+  {
+    id: 5,
+    title: "History of Printmaking and Black Women",
+    image: mockEvent5,
+    place: "590 Washington St MA, USA",
+    host: "Sambista R.",
+    time: "Tue, Feb 20, 1:00 - 3:30 PM EST",
+    going: 4,
+    price: "Free",
+  },
+  {
+    id: 6,
+    title: "Workshop for Women in STEM",
+    image: mockEvent6,
+    place: "AMSA Charter School Marlborugh, MA, USA",
+    host: "Pat and Wendy",
+    time: "Saturday, Feb 24, 12:00 - 4:30 PM EST",
+    going: 16,
+    price: "Free",
+  },
+  {
+    id: 7,
+    title: "Diwali Dance festival",
+    image: mockEvent7,
+    place: "152 Main St, Shrewsbury, MA, USA",
+    host: "John Doe",
+    time: "Friday, Nov 1, 5:00 - 9:30 PM EST",
+    going: 3,
+    price: "Free",
+  },
+];
+
+function EventsDisplay() {
+  const events = mockEvents.slice(0, 8);
+  const location = "Hudson, MA";
 
   return (
-    <div className="events-page">
-      <FilterBar />
-      <EventsList events={events} />
+    <div className="events-display">
+      <div className="events-header-container">
+      <header className="events-header">
+          <h2>Events for you near <LocationIndicator location={location} /></h2>
+        </header>
+        <div className="see-all-events">
+          <Link to="/events" className="see-all-events-button">
+            See all events
+          </Link>
+        </div>
+      </div>
+      <div className="grid">
+        {events.map((event) => (
+          <Link to={`/event/event?id=${event.id}`} key={event.id} className="event-card-link">
+            <div className="event-card">
+              <img src={event.image} alt={event.title} className="event-image" />
+              <h3 className="event-title">{event.title}</h3>
+              <p className="event-host">Hosted by: {event.host}</p>
+              <p className="event-info">
+                <img src={calendarIcon} alt="calendar icon" className="icon"/>
+                {event.time}</p>
+              <p className="event-attendance">
+                <img src={ticketIcon} alt="ticket icon" className="ticket-icon"/>
+                {event.going} going
+                <img src={checkIcon} alt="check icon" className="check-icon"/>
+                {event.price}
+              </p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
-};
+}
 
-export default EventPage;
+export default EventsDisplay;
