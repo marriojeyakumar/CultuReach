@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
-import './AppBar.css'; // Make sure to create a Navbar.css file for styling
-import appLogo from './img/logo.png'; // Update with the correct path to your image
+import './AppBar.css'; 
+import appLogo from './img/logo.png'; 
 import { Link as RouterLink } from 'react-router-dom';
 
 const Navbar = () => {

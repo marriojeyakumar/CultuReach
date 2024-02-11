@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import './ContactForm.css'; // Create this CSS file for styling
+import './ContactForm.css'; 
 
 function ContactForm() {
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add logic to handle the submission of the message, such as sending it to a server
     console.log('Message submitted:', message);
-    // Reset the message input after submission
     setMessage('');
   };
 

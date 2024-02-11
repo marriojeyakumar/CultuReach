@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #102733; /* Dark blue background */
+    background-color: #102733; 
     color: white;
     padding: 0.5rem 2rem 0.005rem;
     top: 0;
@@ -14,9 +14,9 @@
   
 
    .navbar-logo {
-    height: 55px; /* or the size you prefer */
+    height: 55px; 
     margin-right: 10px;
-    vertical-align: middle; /* To align it with your text */
+    vertical-align: middle; 
   }
   
   

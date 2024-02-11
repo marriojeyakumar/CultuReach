@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-hi+&425z!ba+iqkv*uvc0p^*e=wwxkmti442r1-9d=@9^uqiir
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -83,6 +83,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Hackathon',
+        #'NAME': '',
         'USER': 'root',
         'PASSWORD': 'Mbk2X5gn',
         'HOST': 'localhost',  # or the hostname where your MySQL server is running

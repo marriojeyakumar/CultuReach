@@ -19,7 +19,7 @@
     gap: 20px; 
     overflow-x: auto; 
     scroll-behavior: smooth;
-    flex: none; /* This prevents the selector from growing */
+    flex: none; 
     position: relative;
   }
   
@@ -73,11 +73,9 @@
 
   
   .culture-button {
-    /* Your styles */
-    min-width: 230px; /* Ensure the buttons don't shrink */
+    min-width: 230px; 
   }
   
-  /* Hide scrollbar visually */
   .culture-selector::-webkit-scrollbar {
     display: none;
   }

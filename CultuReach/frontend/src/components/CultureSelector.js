@@ -22,7 +22,6 @@ function CultureSelector() {
     { name: 'Italian', flag: italianFlag },
     { name: 'Italian', flag: italianFlag },
     { name: 'Italian', flag: italianFlag },
-    // More cultures if needed
   ];
 
   return (
