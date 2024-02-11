@@ -6,6 +6,7 @@ class event(models.Model):
     host_id = models.CharField(max_length=45)
     start_time = models.IntegerField()
     location = models.CharField(max_length=45)
+    description = models.CharField(max_length=45)
     tags = models.CharField(max_length=45)
     culture = models.CharField(max_length=45)
 

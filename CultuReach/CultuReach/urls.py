@@ -53,7 +53,12 @@ router.register(r'forums',views.ForumView, 'forum')
 
 urlpatterns = [
     path('', views.home),
+    path('test/', views.test),
+    path('test/<int:val>/',views.test2),
 	path('admin/', admin.site.urls),
+    path('search/<str:culture>/<str:tags>/', views.search),
+    path('createEvent/<int:Ihost_id>/<int:Istart_time>/<str:Iname>/<str:Ilocation>/<str:Idescription>/<str:Itags>/<str:Iculture>/', views.createEvent),
+    #path('events/',views.getEvents),
 
 	# add another path to the url patterns
 	# when you visit the localhost:8000/api

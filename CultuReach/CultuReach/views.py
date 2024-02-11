@@ -10,8 +10,6 @@ from rest_framework import viewsets
 # import the TodoSerializer from the serializer file
 from .serializers import *
 
-# import the Todo model from the models file
-from .models import *
 
 # create a class for the Todo model viewsets
 class EventView(viewsets.ModelViewSet):
@@ -40,15 +38,19 @@ class ForumView(viewsets.ModelViewSet):
 def home(request):
     return render(request, 'public/home.html', {})
 
-def search(request):
+def test(request):
+    return HttpResponse(request)
+
+def test2(request,val):
+    return HttpResponse(val)
+
+def search(request,culture,tags):
     context = {}
 
     if request.method == 'GET':
-        culture = request.GET.get('event_culture')
-        tags = request.GET.get('event_tags')
         tags = tags.split()
 
-        events = event.objects.filter(event_culture=culture)
+        events = EventView.queryset.filter(culture=culture)
 
         matches = []
         for event1 in events:
@@ -98,18 +100,13 @@ def checkLogin(request):
         return True
 
 
-def createEvent(request):
-    Ihost_id = request.POST.get('host_id')
-    Istart_time = request.POST.get('start_time')
-    Iname = request.POST.get('name')
-    Ilocation = request.POST.get('location')
-    Idescription = request.POST.get('description')
-    Itags = request.POST.get('tags')
-    Iculture = request.POST.get('culture')
-
+def createEvent(request, Ihost_id, Istart_time, Iname, Ilocation, Idescription, Itags, Iculture):
     eventCount = event.objects.all().count()
-    newevent = event(host_id = Ihost_id, start_time = Istart_time, event_id = eventCount + 1, name = Iname, location = Ilocation, desription = Idescription, tags = Itags, culture = Iculture)
+    newevent = event(host_id=Ihost_id, start_time=Istart_time, event_id=eventCount + 1, name=Iname, location=Ilocation, description=Idescription, tags=Itags, culture=Iculture)
     newevent.save()
+    context = {}
+    context['event'] = newevent
+    return render(request, 'index.html', context)
 
 #returns string if 
 def createUser(request):
