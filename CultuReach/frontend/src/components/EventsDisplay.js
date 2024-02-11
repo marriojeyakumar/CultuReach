@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './EventsDisplay.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./EventsDisplay.css";
 
-import mockEvent1 from './img/mockEvent1.png'; 
-import mockEvent2 from './img/mockEvent2.png';
-import mockEvent3 from './img/mockEvent3.png';
+import mockEvent1 from "./img/mockEvent1.png";
+import mockEvent2 from "./img/mockEvent2.png";
+import mockEvent3 from "./img/mockEvent3.png";
 
 const mockEvents = [
   {
@@ -14,7 +14,7 @@ const mockEvents = [
     host: "AMC Worcester 3RD",
     time: "Wed, Feb 21 - 6:30 PM EST",
     going: 8,
-    price: "Free"
+    price: "Free",
   },
   {
     title: "Second Gathering",
@@ -22,8 +22,8 @@ const mockEvents = [
     place: "Maynard Self Exploration Meetup Group",
     host: "Maynard Group",
     time: "Thu, Feb 15 - 7:30 PM EST",
-    going: 2,
-    price: "Free"
+    going: 6,
+    price: "Free",
   },
   {
     title: "Sunday Mahjong",
@@ -32,7 +32,7 @@ const mockEvents = [
     host: "Jennifer Sherman",
     time: "Sun, Feb 11, 10 - 12:30 PM EST",
     going: 119,
-    price: "Free"
+    price: "Free",
   },
   {
     title: "Intermediate and Advanced Samba!",
@@ -41,7 +41,7 @@ const mockEvents = [
     host: "Sambista R.",
     time: "Wed, Feb 14, 7:30 - 8:30 PM EST",
     going: 12,
-    price: "$10"
+    price: "$10",
   },
   {
     title: "History of Printmaking and Black Women",
@@ -50,7 +50,7 @@ const mockEvents = [
     host: "Sambista R.",
     time: "Tue, Feb 20, 1:00 - 3:30 PM EST",
     going: 4,
-    price: "Free"
+    price: "Free",
   },
   {
     title: "Workshop for Women in STEM",
@@ -59,9 +59,17 @@ const mockEvents = [
     host: "Pat and Wendy",
     time: "Saturday, Feb 24, 12:00 - 4:30 PM EST",
     going: 16,
-    price: "Free"
+    price: "Free",
   },
-  
+  {
+    title: "Diwali Dance festival",
+    image: "mockEvent7",
+    place: "152 Main St, Shrewsbury, MA, USA",
+    host: "John Doe",
+    time: "Friday, Nov 1, 5:00 - 9:30 PM EST",
+    going: 3,
+    price: "Free",
+  },
 ];
 
 function EventsDisplay() {
@@ -83,7 +91,9 @@ function EventsDisplay() {
         ))}
       </div>
       <div className="see-all-events">
-        <Link to="/events" className="see-all-events-button">See all events</Link>
+        <Link to="/events" className="see-all-events-button">
+          See all events
+        </Link>
       </div>
     </div>
   );
