@@ -28,6 +28,23 @@ def search(request):
         
     return render(request, 'index.html', context)
 
+def getEventForum(request):
+    context = {}
+
+    if request.method == 'GET':
+        curEvent_id = request.GET.get('event_id')
+        eventForum = forum.objects.filter(event_id=curEvent_id)
+        matches = []
+        for forum1 in eventForum:
+            match_tag = 0
+            for tag in tags:
+                if tag in event1.tags:
+                    match_tag += 1
+            if match_tag > 0:
+                matches.append(event1)
+                
+        context['events'] = matches
+
 def createEvent(request):
     Ihost_id = request.POST.get('host_id')
     Istart_time = request.POST.get('start_time')
@@ -57,4 +74,11 @@ def createRoster(request):
     newroster = roster(event_id = Ievent_id, user_id = Iuser_id)
     newroster.save()
 
-def createFO
+def createForum(request):
+    Iuser_id = request.POST.get('user_id')
+    Imessage = request.POST.get('message')
+    Ievent_id = request.POST.get('event_id')
+    Itime = request.POST.get('time')
+
+    newforum = forum(user_id = Iuser_id, message = Imessage, event_id = Ievent_id, time = Itime)
+    newforum.save()
