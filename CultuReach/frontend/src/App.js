@@ -10,7 +10,7 @@ import EventTypeSelector from './components/EventTypeSelector';
 import ContactForm from './components/ContactForm';
 import AboutUs from './components/AboutUs'; 
 import EventsPage from './EventsPage';
-
+import EventExpand from './EventExpand';
 
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
           } />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/event/id=:id" element={<EventExpand />} />
         </Routes>
       </div>
     </Router>

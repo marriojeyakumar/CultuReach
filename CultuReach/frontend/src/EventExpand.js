@@ -7,6 +7,7 @@ import timeIcon from './components/img/time-icon.png';
 
 
 
+
 const mockEvents = [
   { id: '1',
     title: "Exploring Banff National Park",
